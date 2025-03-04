@@ -8,7 +8,7 @@ import './App.css';
 const fadeInAnimation = keyframes`${fadeIn}`;
 
 const AnimatedLandingImage = styled.img`
-  animation: 7s ${fadeInAnimation} infinite;
+  animation: 10s ${fadeInAnimation} infinite;
   width: auto; /* Keeps the original width */
   height: auto; /* Keeps the original height */
   max-width: 100%; /* Ensures responsiveness */
