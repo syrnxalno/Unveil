@@ -1,0 +1,18 @@
+.game-container {
+    max-width: 650px; /* Adjust width for readability */
+    margin: 0 auto; /* Center the content */
+    padding: 20px;
+    text-align: justify;
+    line-height: 1.6; /* Improve readability */
+    color: rgb(58, 56, 56);
+  }
+  
+  .game-container h1 {
+    text-align: left; /* Center the heading */
+    margin-bottom: 20px;
+  }
+  
+  .game-container p {
+    text-align: justify; /* Justify text */
+  }
+  
