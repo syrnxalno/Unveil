@@ -3,9 +3,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: cursive;
 }
-
 html, body, #root {
   height: 100%;
   margin: 0;
@@ -34,6 +33,7 @@ html, body, #root {
   align-items: center;
   justify-content: space-between;
   padding: 0 20px;
+  font-weight: bold;
 }
 
 /* Logo */
@@ -100,4 +100,14 @@ html, body, #root {
   position: absolute;
   right: 100px;
   bottom: 0;
+}
+
+/* Full Page Styling for Login & Signup */
+.full-page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #E6E6FA; /* Same pale lavender background */
 }

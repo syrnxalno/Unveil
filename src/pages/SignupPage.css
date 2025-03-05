@@ -1,0 +1,113 @@
+/* Centering the signup form */
+.signup-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #E6E6FA;
+    font-family: Arial, sans-serif;
+    height: 100vh; /* Ensure full-page centering */
+}
+  
+/* Styling the form */
+.signup-form {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    height: 500px; /* Increased height to create space for the logo */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Aligns content to the top */
+    align-items: center;
+    position: relative;
+    padding-top: 100px; /* Adds top padding to push form elements down */
+}
+
+/* Logo Styling */
+.signup-logo {
+    width: 80px; /* Adjust size */
+    position: absolute;
+    top: 30px; /* Moves logo higher inside the form */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Form inputs */
+.signup-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+  
+/* Submit button */
+.signup-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #d1b7e7;
+    color: rgb(58, 56, 56);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+  
+.signup-form button:hover {
+    background-color: #bfbfbf;
+}
+
+/* Error message */
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+  
+/* Heading */
+.signup-form h2 {
+    margin-bottom: 15px;
+    color: #333;
+    margin-top: 30px; /* Pushes text down to make space for the logo */
+}
+
+/* "Or continue with" text */
+.or-text {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Google Sign-In Button */
+.google-signin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    gap: 10px; /* Space between text and icon */
+    transition: all 0.3s ease;
+}
+
+.google-signin:hover {
+    background-color: #f5f5f5;
+}
+
+/* Google Icon */
+.google-icon {
+    width: 20px;
+    height: 20px;
+}
+
