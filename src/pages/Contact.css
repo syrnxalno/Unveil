@@ -12,3 +12,6 @@
     margin-bottom: 20px;
   }
   
+  .contact-container p {
+    text-align: justify; /* Justify text */
+  }
