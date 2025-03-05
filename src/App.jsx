@@ -1,8 +1,12 @@
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
 import styled, { keyframes } from 'styled-components';
 import { fadeIn } from 'react-animations';
-import unveilLogo from './assets/Unveil_logo__2_-removebg-preview.png';
+import unveilLogo from './assets/unveil.png';
 import landingImage from './assets/final land img.png';
+import gameConsoleImage from './assets/console.png';
+import spaceImage from './assets/space.png'; 
+import communityImage from './assets/comm.png';
+import contactImage from './assets/contact.png';
 import './App.css';
 import Signup from './pages/SignupPage';
 import Login from './pages/LoginPage';
@@ -23,7 +27,6 @@ const AnimatedLandingImage = styled.img`
   max-width: 100%;
 `;
 
-// Navbar Component
 function Navbar() {
   const location = useLocation();
   const hideNav = location.pathname === "/login" || location.pathname === "/signup";
@@ -33,7 +36,7 @@ function Navbar() {
       <div className="logo">
         <img src={unveilLogo} alt="Unveil logo" />
       </div>
-      {!hideNav && ( // Only show nav links if NOT on login/signup pages
+      {!hideNav && (
         <div className="nav-container">
           <ul className="nav-links">
             <li><Link to="/">Home</Link></li>
@@ -59,7 +62,6 @@ function App() {
         <Navbar />
 
         <Routes>
-          {/* Regular Pages */}
           <Route path="/" element={
             <div className="content-wrapper">
               <div className="content">
@@ -72,12 +74,59 @@ function App() {
               />
             </div>
           } />
-          <Route path="/games" element={<Games />} />
-          <Route path="/your-space" element={<YourSpace />} />
-          <Route path="/community" element={<Community />} />
-          <Route path="/contact" element={<Contact />} />
+          
+          <Route path="/games" element={
+            <div className="content-wrapper">
+              <div className="content">
+                <Games />
+              </div>
+              <AnimatedLandingImage 
+                src={gameConsoleImage} 
+                alt="Game Console Image" 
+                className="landing-image" 
+              />
+            </div>
+          } />
+          
+          <Route path="/your-space" element={
+            <div className="content-wrapper">
+              <div className="content">
+                <YourSpace />
+              </div>
+              <AnimatedLandingImage 
+                src={spaceImage} 
+                alt="Space Image" 
+                className="landing-image" 
+              />
+            </div>
+          } />
 
-          {/* Full Page Login & Signup (without nav links) */}
+          <Route path="/community" element={
+            <div className="content-wrapper">
+              <div className="content">
+                <Community />
+              </div>
+              <AnimatedLandingImage 
+                src={communityImage} 
+                alt="Community Image" 
+                className="landing-image" 
+              />
+            </div>
+          } />
+
+          <Route path="/contact" element={
+            <div className="content-wrapper">
+              <div className="content">
+                <Contact />
+              </div>
+              <AnimatedLandingImage 
+                src={contactImage} 
+                alt="Contact Image" 
+                className="landing-image" 
+              />
+            </div>
+          } />
+
           <Route path="/signup" element={<div className="full-page"><Signup /></div>} />
           <Route path="/login" element={<div className="full-page"><Login /></div>} />
         </Routes>

@@ -1,17 +1,131 @@
+.contact-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #E6E6FA; 
+  padding: 20px;
+}
+
+
+.contact-content {
+  display: flex;
+  justify-content: center; 
+  align-items: stretch; 
+  gap: 20px; 
+  width: 90%;
+  max-width: 1100px; 
+}
+
+
+.contact-container,
+.social-container {
+  flex: 1; 
+  background: #d1b7e7; 
+  padding: 50px; 
+  border-radius: 12px; /* Smooth rounded edges */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  text-align: center;
+  color: rgb(58, 56, 56); /* Subtle text color */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  min-height: 250px; /* Ensures same height for both containers */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Explicit margin to ensure spacing */
 .contact-container {
-    max-width: 650px; /* Adjust width for readability */
-    margin: 0 auto; /* Center the content */
-    padding: 20px;
-    text-align: justify;
-    line-height: 1.6; /* Improve readability */
-    color: rgb(58, 56, 56);
+  margin-right: 10px; /* Creates a gap on the right side */
+}
+
+.social-container {
+  margin-left: 10px; /* Creates a gap on the left side */
+}
+
+/* Hover effect */
+.contact-container:hover,
+.social-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Headings */
+.contact-container h1,
+.social-container h1 {
+  font-size: 26px;
+  color: #444; /* Softer dark color */
+  margin-bottom: 20px;
+}
+
+/* Text styling */
+.contact-container p,
+.social-container p {
+  font-size: 18px;
+  color: rgb(80, 78, 78);
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+/* Email & Social Links */
+.contact-container p a,
+.social-container p a {
+  color: #6a5acd; /* Soft lavender blue */
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-container p a:hover,
+.social-container p a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .contact-content {
+    flex-direction: column; /* Stacks items on smaller screens */
+    gap: 20px;
   }
-  
-  .contact-container h1 {
-    text-align: left; /* Center the heading */
-    margin-bottom: 20px;
+
+  .contact-container,
+  .social-container {
+    max-width: 100%; /* Allows full width on smaller screens */
+    margin: 0; /* Removes margin to prevent unwanted spacing */
   }
-  
-  .contact-container p {
-    text-align: justify; /* Justify text */
+}
+/* Social Media Icons Container */
+.social-icons {
+  display: flex;
+  justify-content: center; /* Centers icons */
+  gap: 20px; /* Space between icons */
+  margin-top: 15px;
+}
+
+/* Social Media Buttons */
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px; /* Circle size */
+  height: 50px;
+  border-radius: 50%; /* Makes it circular */
+  background-color: #6a5acd; /* Soft lavender blue */
+  color: white;
+  font-size: 22px;
+  text-decoration: none;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+/* Hover Effects */
+.social-btn:hover {
+  background-color: #483d8b; /* Darker shade */
+  transform: scale(1.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .social-icons {
+    gap: 15px; /* Reduce space for smaller screens */
   }
+}
+

@@ -1,6 +1,6 @@
 import React from "react";
 import "./LoginPage.css";
-import unveilLogo from "../assets/Unveil_logo__2_-removebg-preview.png";
+import unveilLogo from "../assets/unveil.png";
 import googleIcon from "../assets/google.png"; // Add your Google icon here
 
 function LoginPage() {
@@ -10,7 +10,7 @@ function LoginPage() {
         {/* Logo should be above the heading */}
         <img src={unveilLogo} alt="Unveil logo" className="login-logo" />
         
-        <h2>Login Page</h2>
+        <h2>Login</h2>
         <form>
           <input type="email" placeholder="Enter Email" />
           <input type="password" placeholder="Enter Password" />

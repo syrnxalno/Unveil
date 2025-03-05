@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./SignupPage.css";
-import unveilLogo from "../assets/Unveil_logo__2_-removebg-preview.png";
+import unveilLogo from "../assets/unveil.png";
 import googleIcon from "../assets/google.png"; // Add your Google icon here
 
 function SignupPage() {
@@ -15,7 +15,7 @@ function SignupPage() {
       <div className="signup-form">
         <img src={unveilLogo} alt="Unveil logo" className="signup-logo" />
         
-        <h2>Signup Page</h2>
+        <h2>Signup</h2>
         <form>
           <input
             type="email"
