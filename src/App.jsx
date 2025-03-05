@@ -4,6 +4,9 @@ import {fadeIn} from 'react-animations';
 import unveilLogo from './assets/Unveil_logo__2_-removebg-preview.png';
 import landingImage from './assets/final land img.png';
 import './App.css';
+import Signup from './pages/SignupPage';
+import Login from './pages/LoginPage';
+
 
 const fadeInAnimation = keyframes`${fadeIn}`;
 
@@ -39,9 +42,9 @@ function App() {
               <li><Link to="/contact">Contact</Link></li>
             </ul>
             <div className="auth-buttons">
-              <button className="button">Login</button>
-              <button className="button">Sign Up</button>
-            </div>
+  <Link to="/login"><button className="button">Login</button></Link>
+  <Link to="/signup"><button className="button">Sign Up</button></Link>
+</div>
           </div>
         </nav>
 
@@ -54,6 +57,9 @@ function App() {
               <Route path="/your-space" element={<YourSpace />} />
               <Route path="/community" element={<Community />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/signup" element={<Signup />} />
+              <Route path="/login" element={<Login />} />
+ 
             </Routes>
           </div>
           <AnimatedLandingImage 
