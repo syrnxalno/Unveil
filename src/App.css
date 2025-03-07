@@ -10,7 +10,7 @@ html, body, #root {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: #E6E6FA; /* Pale lavender */
+  background-color: #E6E6FA !important; /* Pale lavender */
 }
 
 /* Background container */
