@@ -128,4 +128,12 @@
     gap: 15px; /* Reduce space for smaller screens */
   }
 }
+.landing-image {
+  max-width: 40%;
+  height: auto;
+  position: absolute;
+  right: 100px;
+  bottom: 0;
+}
+
 

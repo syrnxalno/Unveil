@@ -1,8 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
-import styled, { keyframes } from 'styled-components';
-import { fadeIn } from 'react-animations';
 import unveilLogo from './assets/unveil.png';
-import landingImage from './assets/final land img.png';
 import gameConsoleImage from './assets/console.png';
 import spaceImage from './assets/space.png'; 
 import communityImage from './assets/comm.png';
@@ -17,15 +14,6 @@ import Games from './pages/Games';
 import YourSpace from './pages/YourSpace';
 import Community from './pages/Community';
 import Contact from './pages/Contact';
-
-const fadeInAnimation = keyframes`${fadeIn}`;
-
-const AnimatedLandingImage = styled.img`
-  animation: 10s ${fadeInAnimation} infinite;
-  width: auto;
-  height: auto;
-  max-width: 100%;
-`;
 
 function Navbar() {
   const location = useLocation();
@@ -62,73 +50,13 @@ function App() {
         <Navbar />
 
         <Routes>
-          <Route path="/" element={
-            <div className="content-wrapper">
-              <div className="content">
-                <Home />
-              </div>
-              <AnimatedLandingImage 
-                src={landingImage} 
-                alt="Landing page image: Peer review" 
-                className="landing-image" 
-              />
-            </div>
-          } />
-          
-          <Route path="/games" element={
-            <div className="content-wrapper">
-              <div className="content">
-                <Games />
-              </div>
-              <AnimatedLandingImage 
-                src={gameConsoleImage} 
-                alt="Game Console Image" 
-                className="landing-image" 
-              />
-            </div>
-          } />
-          
-          <Route path="/your-space" element={
-            <div className="content-wrapper">
-              <div className="content">
-                <YourSpace />
-              </div>
-              <AnimatedLandingImage 
-                src={spaceImage} 
-                alt="Space Image" 
-                className="landing-image" 
-              />
-            </div>
-          } />
-
-          <Route path="/community" element={
-            <div className="content-wrapper">
-              <div className="content">
-                <Community />
-              </div>
-              <AnimatedLandingImage 
-                src={communityImage} 
-                alt="Community Image" 
-                className="landing-image" 
-              />
-            </div>
-          } />
-
-          <Route path="/contact" element={
-            <div className="content-wrapper">
-              <div className="content">
-                <Contact />
-              </div>
-              <AnimatedLandingImage 
-                src={contactImage} 
-                alt="Contact Image" 
-                className="landing-image" 
-              />
-            </div>
-          } />
-
-          <Route path="/signup" element={<div className="full-page"><Signup /></div>} />
-          <Route path="/login" element={<div className="full-page"><Login /></div>} />
+          <Route path="/" element={<Home />} />
+          <Route path="/games" element={<Games />} />
+          <Route path="/your-space" element={<YourSpace />} />
+          <Route path="/community" element={<Community />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       </div>
     </Router>

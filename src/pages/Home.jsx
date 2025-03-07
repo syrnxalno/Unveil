@@ -1,5 +1,18 @@
 import React from "react";
 import "./Home.css"; // Import the CSS file
+import landingImage from '../assets/final land img.png'; // Ensure correct file path
+import { keyframes } from 'styled-components';
+import styled from 'styled-components';
+import { fadeIn } from 'react-animations';
+
+const fadeInAnimation = keyframes`${fadeIn}`;
+
+const AnimatedLandingImage = styled.img`
+  animation: 10s ${fadeInAnimation} infinite;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+`;
 
 function Home() {
   return (
@@ -16,6 +29,12 @@ function Home() {
         Step into a journey of healing—where you can <strong>unveil</strong> your true self, free from judgment,
         and embrace wellness at your own pace.
       </p>
+      {/* Landing Image */}
+      <AnimatedLandingImage 
+        src={landingImage} 
+        alt="Landing Page Image: Peer Review" 
+        className="landing-image"
+      />
     </div>
   );
 }

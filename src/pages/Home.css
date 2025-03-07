@@ -16,3 +16,11 @@
     text-align: justify; /* Justify text */
   }
   
+  /* Landing image styling */
+.landing-image {
+  max-width: 40%;
+  height: auto;
+  position: absolute;
+  right: 100px;
+  bottom: 0;
+}
