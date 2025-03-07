@@ -1,63 +1,78 @@
-/* Centering the signup form */
+/* Overall container styling */
 .signup-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
-    background-color: #E6E6FA;
-    font-family: Arial, sans-serif;
-    height: 100vh; /* Ensure full-page centering */
+    justify-content: space-between;
+    background-color: #fafaff;
+    font-family: "Poppins", sans-serif;
+    height: 80vh;
+    width: 75vw;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
 }
-  
-/* Styling the form */
+
+/* Left side: Signup form */
 .signup-form {
     background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    height: 500px; /* Increased height to create space for the logo */
-    text-align: center;
+    padding: 60px;
+    width: 80%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Aligns content to the top */
-    align-items: center;
-    position: relative;
-    padding-top: 100px; /* Adds top padding to push form elements down */
+    justify-content: center;
+    align-items: flex-start;
 }
 
-/* Logo Styling */
 .signup-logo {
-    width: 80px; /* Adjust size */
-    position: absolute;
-    top: 30px; /* Moves logo higher inside the form */
-    left: 50%;
-    transform: translateX(-50%);
+    width: 90px;
+    margin-bottom: 15px;
 }
 
-/* Form inputs */
+/* Heading */
+.signup-form h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Input fields */
 .signup-form input {
-    width: 100%;
-    padding: 10px;
-    margin: 8px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 14px;
-}
-  
-/* Submit button */
-.signup-form button {
-    width: 100%;
-    padding: 10px;
-    background-color: #d1b7e7;
-    color: rgb(58, 56, 56);
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+    width: 90%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
     font-size: 16px;
-    margin-top: 10px;
+    background-color: #f9f9f9;
+    transition: border 0.3s ease-in-out;
 }
-  
+
+.signup-form input:focus {
+    border: 1px solid #a885d8;
+    outline: none;
+}
+
+/* Signup button */
+.signup-form button {
+    width: 90%;
+    padding: 12px;
+    color: rgb(58, 56, 56);
+    background-color: #d1b7e7;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
 .signup-form button:hover {
     background-color: #bfbfbf;
 }
@@ -68,46 +83,108 @@
     font-size: 14px;
     margin-top: 5px;
 }
-  
-/* Heading */
-.signup-form h2 {
-    margin-bottom: 15px;
-    color: #333;
-    margin-top: 30px; /* Pushes text down to make space for the logo */
-}
 
 /* "Or continue with" text */
 .or-text {
     margin-top: 15px;
     font-size: 14px;
     color: #666;
+    align-self: flex-start;
 }
 
-/* Google Sign-In Button */
+/* Google sign-in button */
 .google-signin {
+    width: 90%;
+    padding: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    padding: 10px;
-    background-color: white;
-    color: black;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    cursor: pointer;
+    gap: 10px;
     font-size: 16px;
-    margin-top: 10px;
-    gap: 10px; /* Space between text and icon */
-    transition: all 0.3s ease;
+    font-weight: 500;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: white;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 .google-signin:hover {
     background-color: #f5f5f5;
 }
 
-/* Google Icon */
 .google-icon {
     width: 20px;
     height: 20px;
 }
 
+/* Right side: Video container */
+.video-container {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.signup-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Floating quote */
+.floating-quote {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    width: 250px;
+    max-width: 50%;
+    font-size: 1rem;
+    font-weight: 600;
+    font-style: italic;
+    color: #333;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 12px 20px;
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 2s ease-in-out, floatUpDown 5s infinite ease-in-out;
+}
+
+/* Fireflies animation */
+.firefly {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: rgba(255, 215, 0, 0.8);
+    border-radius: 50%;
+    box-shadow: 0px 0px 8px rgba(255, 215, 0, 0.6);
+    opacity: 0.8;
+    animation: flicker 3s infinite alternate ease-in-out, moveAround 8s infinite linear;
+}
+
+@keyframes flicker {
+    0% { opacity: 0.4; }
+    50% { opacity: 1; }
+    100% { opacity: 0.4; }
+}
+
+@keyframes moveAround {
+    0% { transform: translate(0, 0); }
+    50% { transform: translate(20px, -20px); }
+    100% { transform: translate(0, 0); }
+}
+
+/* Fade-in effect */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Floating animation */
+@keyframes floatUpDown {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0px); }
+}

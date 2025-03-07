@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./SignupPage.css";
 import unveilLogo from "../assets/unveil.png";
-import googleIcon from "../assets/google.png"; // Add your Google icon here
+import googleIcon from "../assets/google.png";
+import therapyVideo from "../assets/untitled.mp4"; // Corrected import
 
 function SignupPage() {
   const [email, setEmail] = useState("");
@@ -10,11 +11,22 @@ function SignupPage() {
 
   const isMatching = password === confirmPassword && password.length > 0;
 
+  // Fireflies Effect (Dynamically Create Fireflies)
+  useEffect(() => {
+    const container = document.querySelector(".signup-container");
+    for (let i = 0; i < 10; i++) {
+      let firefly = document.createElement("div");
+      firefly.classList.add("firefly");
+      firefly.style.left = `${Math.random() * 100}%`;
+      firefly.style.top = `${Math.random() * 100}%`;
+      firefly.style.animationDuration = `${Math.random() * 5 + 3}s`; // Vary speeds
+      container.appendChild(firefly);
+    }
+  }, []);
+
   return (
     <div className="signup-container">
       <div className="signup-form">
-        <img src={unveilLogo} alt="Unveil logo" className="signup-logo" />
-        
         <h2>Signup</h2>
         <form>
           <input
@@ -49,6 +61,18 @@ function SignupPage() {
           <img src={googleIcon} alt="Google Icon" className="google-icon" />
           Google
         </button>
+      </div>
+
+      {/* Background Video for Relaxing Effect */}
+      <video className="signup-video" autoPlay loop muted>
+        <source src={therapyVideo} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      
+      
+      {/* Floating Quote */}
+      <div className="floating-quote">
+        <p>"Healing begins with a single step. You are stronger than you think."</p>
       </div>
     </div>
   );

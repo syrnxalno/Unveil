@@ -1,82 +1,185 @@
-/* Updated login container to be a large rectangle */
+/* Overall container styling */
 .login-container {
     display: flex;
-    flex-direction: row; /* Arrange form and image side by side */
+    flex-direction: row;
     align-items: center;
-    justify-content: flex-start; /* Align everything to the left */
-    background-color: #E6E6FA;
-    font-family: Arial, sans-serif;
-    height: 80vh; /* Fill more of the screen */
-    width: 80vw; /* Make it wider */
-    margin: auto; /* Center the entire login box on the screen */
-    border-radius: 10px; /* Smooth edges */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    overflow: hidden; /* Ensure no content overflows */
+    justify-content: space-between;
+    background-color: #fafaff;
+    font-family: "Poppins", sans-serif;
+    height: 80vh;
+    width: 75vw;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
 }
 
-/* Adjust login form positioning */
+/* Left side: Login form */
 .login-form {
     background: white;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: none;
-    width: 50%; /* Take only half of the container */
-    height: 100%; /* Stretch to match the container height */
-    text-align: left; /* Align text towards the left */
+    padding: 60px;
+    width: 50%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Center vertically */
-    align-items: flex-start; /* Align everything to the left */
-    position: relative;
+    justify-content: center;
+    align-items: flex-start;
 }
 
-/* Adjust logo positioning */
 .login-logo {
-    width: 80px;
-    position: absolute;
-    top: 30px;
-    left: 30px; /* Move it to the left */
-    transform: none;
-}
-
-/* Center align the heading */
-.login-form h2 {
+    width: 90px;
     margin-bottom: 15px;
+}
+
+/* Heading */
+.login-form h2 {
+    font-size: 2rem;
+    font-weight: 600;
     color: #333;
-    margin-top: 20px;
-    align-self: flex-start; /* Align to the left */
+    margin-bottom: 20px;
 }
 
-/* Adjust input fields */
+/* Input fields */
 .login-form input {
-    width: 90%; /* Adjust width */
-    padding: 10px;
-    margin: 8px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 14px;
+    width: 90%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    transition: border 0.3s ease-in-out;
 }
 
-/* Adjust buttons */
+.login-form input:focus {
+    border: 1px solid #a885d8;
+    outline: none;
+}
+
+/* Login button */
 .login-form button {
     width: 90%;
+    padding: 12px;
+    color: rgb(58, 56, 56);
+    background-color: #d1b7e7;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
 }
 
-/* Adjust "Or continue with" text */
+.login-form button:hover {
+    background-color:  #bfbfbf;
+}
+
+/* "Or continue with" text */
 .or-text {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #666;
     align-self: flex-start;
 }
 
-/* Adjust Google Sign-In button */
+/* Google sign-in button */
 .google-signin {
     width: 90%;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: white;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-/* Right section for the image */
-.login-image {
-    width: 50%; /* Takes the right half */
+.google-signin:hover {
+    background-color: #f5f5f5;
+}
+
+.google-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* Right side: Video container */
+.video-container {
+    position: relative;
+    width: 50%;
     height: 100%;
-    background-image: url('../assets/space.png'); /* Replace with your image */
-    background-size: cover;
-    background-position: center;
+    overflow: hidden;
+}
+
+.login-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Floating quote */
+/* Floating quote - Smaller box with a lighter background */
+.floating-quote {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    width: 250px; /* Auto width based on text */
+    max-width: 50%;
+    font-size: 1rem;
+    font-weight: 600;
+    font-style: italic;
+    color: #333; /* Dark text for better contrast */
+    text-align: center;
+    background: rgba(255, 255, 255, 0.85); /* Light background */
+    padding: 12px 20px;
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 2s ease-in-out, floatUpDown 5s infinite ease-in-out;
+}
+
+
+/* Fireflies animation */
+.firefly {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: rgba(255, 215, 0, 0.8);
+    border-radius: 50%;
+    box-shadow: 0px 0px 8px rgba(255, 215, 0, 0.6);
+    opacity: 0.8;
+    animation: flicker 3s infinite alternate ease-in-out, moveAround 8s infinite linear;
+}
+
+@keyframes flicker {
+    0% { opacity: 0.4; }
+    50% { opacity: 1; }
+    100% { opacity: 0.4; }
+}
+
+@keyframes moveAround {
+    0% { transform: translate(0, 0); }
+    50% { transform: translate(20px, -20px); }
+    100% { transform: translate(0, 0); }
+}
+
+/* Fade-in effect */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Floating animation */
+@keyframes floatUpDown {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0px); }
 }
