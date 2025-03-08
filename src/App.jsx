@@ -1,9 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
 import unveilLogo from './assets/unveil.png';
-import gameConsoleImage from './assets/console.png';
-import spaceImage from './assets/space.png'; 
-import communityImage from './assets/comm.png';
-import contactImage from './assets/contact.png';
 import './App.css';
 import Signup from './pages/SignupPage';
 import Login from './pages/LoginPage';
@@ -14,6 +10,7 @@ import Games from './pages/Games';
 import YourSpace from './pages/YourSpace';
 import Community from './pages/Community';
 import Contact from './pages/Contact';
+import GameExplore from './pages/game-content'; // Import the GameContent page
 
 function Navbar() {
   const location = useLocation();
@@ -52,6 +49,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/games" element={<Games />} />
+          <Route path="/games/game-content" element={<GameExplore />} /> {/* Added Route */}
           <Route path="/your-space" element={<YourSpace />} />
           <Route path="/community" element={<Community />} />
           <Route path="/contact" element={<Contact />} />

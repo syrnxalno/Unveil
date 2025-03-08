@@ -1,0 +1,56 @@
+html, body, #root {
+    background-color: #E6E6FA !important; /* Pale lavender */
+  }
+.explore-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #E6E6FA !important; 
+  }
+  
+  .iframe-container {
+    padding-top: 500px;
+   
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .game-iframe {
+    width: 600px;
+    height: 400px;
+    border: none;
+    border-radius: 15px;
+  }
+  
+  .back-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #d1b7e7;
+    color: rgb(58, 56, 56);
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .back-button:hover {
+    background-color: #555;
+  }
+
+  .text-container{
+    color: rgb(58, 56, 56);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 15px;
+    line-height: 2;
+    padding: 50px;
+    background-color: #d1b7e7;
+    font-size: 15px;
+   
+  }
+  .text-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  
