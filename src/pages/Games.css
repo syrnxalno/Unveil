@@ -1,25 +1,46 @@
 .game-container {
-    max-width: 650px; /* Adjust width for readability */
-    margin: 0 auto; /* Center the content */
-    padding: 20px;
-    text-align: justify;
-    line-height: 1.6; /* Improve readability */
-    color: rgb(58, 56, 56);
-  }
-  
-  .game-container h1 {
-    text-align: left; /* Center the heading */
-    margin-bottom: 20px;
-  }
-  
-  .game-container p {
-    text-align: justify; /* Justify text */
-  }
-  .landing-image {
-    max-width: 40%;
-    height: auto;
-    position: absolute;
-    right: 100px;
-    bottom: 0;
-  }
-  
+  max-width: 650px; /* Adjust width for readability */
+  margin: 0 auto; /* Center the content */
+  padding: 20px;
+  text-align: justify;
+  line-height: 1.6; /* Improve readability */
+  color: rgb(58, 56, 56);
+}
+
+.game-container h1 {
+  text-align: left; /* Center the heading */
+  margin-bottom: 20px;
+}
+
+.game-container p {
+  text-align: justify; /* Justify text */
+}
+
+.landing-image {
+  max-width: 40%;
+  height: auto;
+  position: absolute;
+  right: 100px;
+  bottom: 0;
+}
+
+/* Redirect Button Styling */
+.redirect-button {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 20px;
+  background-color: #E6E6FA; /* Dark lavender */
+  color: black;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-align: center;
+  margin-left: 200px;
+}
+
+.redirect-button:hover {
+  background-color: #996cb9; /* Slightly darker lavender */
+  transform: scale(1.05);
+}
