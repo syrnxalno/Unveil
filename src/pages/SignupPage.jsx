@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "./SignupPage.css";
-import unveilLogo from "../assets/unveil.png";
 import googleIcon from "../assets/google.png";
 import therapyVideo from "../assets/untitled.mp4"; // Corrected import
 

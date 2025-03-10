@@ -68,43 +68,49 @@ function Home() {
 
       {/* Cards Section */}
       <div className="cards-section">
-        <div className={`cards-container ${inView ? 'in-view' : ''}`}>
-          <div className="card">
-            <img src={mindfulnessImage} alt="Mindfulness" />
-            <h3>Mindfulness</h3>
-            <p>Find peace through meditation and mindfulness practices.</p>
-          </div>
-          <div className="card">
-            <img src={communityImage} alt="Community" />
-            <h3>Community</h3>
-            <p>Engage in supportive and meaningful conversations.</p>
-          </div>
-          <div className="card">
-            <img src={personalizedResourcesImage} alt="Personalized Resources" />
-            <h3>Personalized Resources</h3>
-            <p id="paragraph">Access tools to support your unique journey of healing.</p>
-          </div>
-          <div className="card">
-            <img src={growthImage} alt="Growth" />
-            <h3>Growth</h3>
-            <p>Explore your potential and achieve personal growth.</p>
-          </div>
-          <div className="card">
-            <img src={healingImage} alt="Healing" />
-            <h3>Healing</h3>
-            <p>Discover practices to heal your mind and body.</p>
-          </div>
-          <div className="card">
-            <img src={balanceImage} alt="Balance" />
-            <h3>Balance</h3>
-            <p>Learn how to balance your life and restore harmony.</p>
-          </div>
-        </div>
-      </div>
+  <div className={`cards-container ${inView ? 'in-view' : ''}`}>
+    <a href="https://www.mindful.org/the-science-of-mindfulness/" className="card" target="_blank" rel="noopener noreferrer">
+      <img src={mindfulnessImage} alt="Mindfulness" />
+      <h3>Mindfulness</h3>
+      <p>Find peace through meditation and mindfulness practices.</p>
+    </a>
+
+    <a href="https://www.psychologytoday.com/us/groups" className="card" target="_blank" rel="noopener noreferrer">
+      <img src={communityImage} alt="Community" />
+      <h3>Community</h3>
+      <p>Engage in supportive and meaningful conversations.</p>
+    </a>
+
+    <a href="https://www.headspace.com/" className="card" target="_blank" rel="noopener noreferrer">
+      <img src={personalizedResourcesImage} alt="Personalized Resources" />
+      <h3>Personalized Resources</h3>
+      <p>Access tools to support your unique journey of healing.</p>
+    </a>
+
+    <a href="https://www.selfgrowth.com/" className="card" target="_blank" rel="noopener noreferrer">
+      <img src={growthImage} alt="Growth" />
+      <h3>Growth</h3>
+      <p>Explore your potential and achieve personal growth.</p>
+    </a>
+
+    <a href="https://www.verywellmind.com/self-healing-4171644" className="card" target="_blank" rel="noopener noreferrer">
+      <img src={healingImage} alt="Healing" />
+      <h3>Healing</h3>
+      <p>Discover practices to heal your mind and body.</p>
+    </a>
+
+    <a href="https://www.mindbodygreen.com/" className="card" target="_blank" rel="noopener noreferrer">
+      <img src={balanceImage} alt="Balance" />
+      <h3>Balance</h3>
+      <p>Learn how to balance your life and restore harmony.</p>
+    </a>
+  </div>
+</div>
+
 
       {/* Footer */}
       <footer className="footer">
-        <p>&copy; 2025 Unveil. All rights reserved.</p>
+        <p>&copy; 2025 TheUnveilProject. All rights reserved.</p>
       </footer>
     </div>
   );
