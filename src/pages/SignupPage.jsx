@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./SignupPage.css";
 import unveilLogo from "../assets/unveil.png";
 import googleIcon from "../assets/google.png";
-import therapyVideo from "../assets/Untitled design (1).mp4"; // Corrected import
+import therapyVideo from "../assets/Untitled design (2).mp4"; // Corrected import
 
 function SignupPage() {
   const [email, setEmail] = useState("");
