@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./SignupPage.css";
-import unveilLogo from "../assets/unveil.png";
 import googleIcon from "../assets/google.png";
-import therapyVideo from "../assets/Untitled design (2).mp4"; // Corrected import
+import therapyVideo from "../assets/untitled.mp4"; // Corrected import
 
 function SignupPage() {
   const [email, setEmail] = useState("");
@@ -27,7 +26,6 @@ function SignupPage() {
   return (
     <div className="signup-container">
       <div className="signup-form">
-        <img src={unveilLogo} alt="Unveil logo" className="signup-logo" />
         <h2>Signup</h2>
         <form>
           <input
@@ -70,10 +68,7 @@ function SignupPage() {
         Your browser does not support the video tag.
       </video>
       
-      {/* Floating Quote */}
-      <div className="floating-quote">
-          <p>"Take a deep breath. You are doing better than you think."</p>
-        </div>
+      
       {/* Floating Quote */}
       <div className="floating-quote">
         <p>"Healing begins with a single step. You are stronger than you think."</p>

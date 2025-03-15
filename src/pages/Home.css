@@ -1,18 +1,165 @@
+/* Home Page Layout */
+.home-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  background-color: #E6E6FA; /* Lavender background */
+}
+
+/* Home Container */
 .home-container {
-    max-width: 650px; /* Adjust width for readability */
-    margin: 0 auto; /* Center the content */
-    padding: 20px;
-    text-align: justify;
-    line-height: 1.6; /* Improve readability */
-    color: rgb(58, 56, 56);
+  display: flex; /* Aligns text & image side by side */
+  align-items: center; /* Centers them vertically */
+  justify-content: space-between; /* Spaces text and image */
+  width: 100%;
+  max-width: 1200px; /* Keeps content readable */
+  padding: 20px;
+}
+
+/* Text Box */
+.text-box {
+  width: 50%; /* Ensure it takes up half the space */
+  background-color: #d1b7e7; /* Soft purple background */
+  padding: 30px;
+  border-radius: 15px;
+  text-align: left;
+  line-height: 1.6;
+  color: rgb(58, 56, 56);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 1100px; /* Moves the text box lower */
+}
+
+/* Hover Animation */
+.text-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading inside Text Box */
+.text-box h1 {
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  color: #4a4a4a;
+}
+
+/* Paragraphs inside Text Box */
+.text-box p {
+  font-size: 1.2rem;
+  text-align: justify;
+}
+
+/* Landing Image */
+.landing-image {
+  width: 45%; /* Adjust width to fit next to text */
+  max-width: 500px;
+  height: auto;
+  display: block;
+}
+
+/* Cards Section */
+.cards-section {
+  width: 100%;
+  background-color: #E6E6FA;
+  padding: 70px 0;
+  display: flex;
+  justify-content: center;
+  margin-top: 100px; /* Adjusted spacing */
+}
+
+/* Cards Container */
+.cards-container {
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.cards-container.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Individual Card */
+.card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 30%;
+  max-width: 350px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  color: #4a4a4a;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #6a6a6a;
+  margin-top: 10px;
+}
+
+/* Hover Effect */
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .home-container {
+    flex-direction: column; /* Stack text and image */
+    align-items: center;
+    text-align: center;
   }
-  
-  .home-container h1 {
-    text-align: left; /* Center the heading */
-    margin-bottom: 20px;
+
+  .text-box {
+    width: 100%; /* Full width on smaller screens */
+    text-align: center;
+    margin-top: 30px; /* Adjust spacing for smaller screens */
   }
-  
-  .home-container p {
-    text-align: justify; /* Justify text */
+
+  .landing-image {
+    width: 80%;
+    margin-top: 20px;
   }
-  
+
+  .card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .text-box {
+    margin-top: 20px; /* Reduce spacing on smaller screens */
+  }
+
+  .card {
+    width: 80%;
+  }
+
+  .cards-section {
+    margin-top: 50px; /* Adjust spacing */
+  }
+}

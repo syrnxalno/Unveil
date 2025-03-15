@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./LoginPage.css";
 import unveilLogo from "../assets/unveil.png";
-import googleIcon from "../assets/google.png";
-import therapyVideo from "../assets/Untitled design (2).mp4";
+import googleIcon from "../assets/google.png"; // Add your Google icon here
 
 function LoginPage() {
   const [email, setEmail] = useState("");
@@ -24,7 +23,9 @@ function LoginPage() {
   return (
     <div className="login-container">
       <div className="login-form">
+        {/* Logo should be above the heading */}
         <img src={unveilLogo} alt="Unveil logo" className="login-logo" />
+        
         <h2>Login</h2>
         <form>
           <input
@@ -48,23 +49,6 @@ function LoginPage() {
           Google
         </button>
       </div>
-
-      {/* Background Video and Floating Quote */}
-      <div className="video-container">
-        <video className="login-video" autoPlay loop muted>
-          <source src={therapyVideo} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-
-        {/* Floating Quote */}
-        <div className="floating-quote">
-          <p>"Take a deep breath. You are doing better than you think."</p>
-        </div>
-      </div>
-      <div className="floating-quote">
-    <p>"Healing begins with a single step. You are stronger than you think."</p>
-</div>
-
     </div>
   );
 }
