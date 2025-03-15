@@ -19,7 +19,9 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="logo">
+        <Link to = "/">
         <img src={unveilLogo} alt="Unveil logo" />
+        </Link>
       </div>
       {!hideNav && (
         <div className="nav-container">
