@@ -27,7 +27,7 @@ function Community() {
                 <a href="https://discord.gg/U5VhW6cF" target="_blank" rel="noopener noreferrer" className="social-btn">
                   <FontAwesomeIcon icon={faDiscord} />
                 </a>
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="social-btn">
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="social-btn">
                   <FontAwesomeIcon icon={faXTwitter} />
                 </a>
               </div>    
