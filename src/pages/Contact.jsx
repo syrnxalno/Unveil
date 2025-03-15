@@ -22,7 +22,7 @@ function Contact() {
       <div className="contact-container">
         <h1>Contact Us</h1>
         <p>Phone: +91 XXXXXXXXXX</p>
-        <p>Email: <a href="mailto:unveilproject@gmail.com">unveilproject@gmail.com</a></p>
+        <p>Email: <a href="mailto:unveilproject@gmail.com">theunveilproject@gmail.com</a></p>
       </div>
 
       <div className="social-container">

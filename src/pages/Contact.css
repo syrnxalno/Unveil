@@ -109,7 +109,7 @@
   width: 50px; /* Circle size */
   height: 50px;
   border-radius: 50%; /* Makes it circular */
-  background-color: #6a5acd; /* Soft lavender blue */
+  background-color: #887ae0; /* Soft lavender blue */
   color: white;
   font-size: 22px;
   text-decoration: none;
@@ -118,7 +118,7 @@
 
 /* Hover Effects */
 .social-btn:hover {
-  background-color: #483d8b; /* Darker shade */
+  background-color: #a196e8; /* Darker shade */
   transform: scale(1.1);
 }
 
