@@ -1,108 +1,3 @@
-<<<<<<< HEAD
-/* Updated login container to be a large rectangle */
-.login-container {
-    display: flex;
-    flex-direction: row; /* Arrange form and image side by side */
-    align-items: center;
-    justify-content: flex-start; /* Align everything to the left */
-    background-color: #fafaff;
-    font-family: Arial, sans-serif;
-    height: 80vh; /* Fill more of the screen */
-    width: 77vw; /* Make it wider */
-    margin: auto; /* Center the entire login box on the screen */
-    border-radius: 10px; /* Smooth edges */
-    /* box-shadow: 0 4px 15px rgba(193, 156, 197, 0.2); */
-    overflow: hidden; /* Ensure no content overflows */
-    position: relative; /* Required for floating elements */
-}
-
-/* Adjust login form positioning */
-.login-form {
-    background: #fafaff;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: none;
-    width: 50%; /* Take only half of the container */
-    height: 100%; /* Stretch to match the container height */
-    text-align: left; /* Align text towards the left */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Center vertically */
-    align-items: flex-start; /* Align everything to the left */
-    position: relative;
-}
-
-/* Floating Quote */
-.floating-quote {
-    position: absolute;
-    bottom: 0%; /* Adjust placement */
-    right: 0%;
-    width: 40%;
-    font-size: 1.5rem;
-    font-style: roman;
-    font-weight: bold;
-    color: #5a5a5a; /* Soft grey */
-    text-align: center;
-    background: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    border-radius: 12px;
-    backdrop-filter: blur(8px);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    animation: fadeIn 2s ease-in-out, floatUpDown 5s infinite ease-in-out;
-}
-
-/* Fade-in Effect */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* Floating Effect */
-@keyframes floatUpDown {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0px); }
-}
-
-/* Adjust logo positioning */
-.login-logo {
-    width: 80px;
-    position: absolute;
-    top: 30px;
-    left: 30px; /* Move it to the left */
-    transform: none;
-}
-
-/* Center align the heading */
-.login-form h2 {
-    margin-bottom: 15px;
-    color: #333;
-    margin-top: 20px;
-    align-self: flex-start; /* Align to the left */
-}
-
-/* Adjust input fields */
-.login-form input {
-    width: 90%; /* Adjust width */
-    padding: 10px;
-    margin: 8px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 14px;
-    color: #333; /* Set text color to dark gray */
-    background-color:white ; /* Ensure background is white */
-    caret-color: #333; /* Set cursor color */
-    opacity: 1;
-    
-
-}
-
-/* Adjust buttons */
-.login-form button {
-    width: 90%;
-    color: gray;
-    background-color:#d1b7e7;
-=======
 /* Overall container styling */
 .login-container {
     display: flex;
@@ -180,28 +75,10 @@
 
 .login-form button:hover {
     background-color:  #bfbfbf;
->>>>>>> bcad29f3f27a434c174fa72ca69213b614670f34
 }
 
-/* Adjust "Or continue with" text */
+/* "Or continue with" text */
 .or-text {
-<<<<<<< HEAD
-    align-self: flex-start;
-}
-
-/* Adjust Google Sign-In button */
-.google-signin {
-    width: 90%;
-}
-
-/* Right section for the image */
-.LoginPage-gif {
-    max-width: 20%;
-    height: auto;
-    border-radius: 8px;
-    object-fit: contain; /* Ensures it fits well */
-    overflow: hidden;
-=======
     margin-top: 15px;
     font-size: 14px;
     color: #666;
@@ -232,7 +109,6 @@
 .google-icon {
     width: 20px;
     height: 20px;
->>>>>>> bcad29f3f27a434c174fa72ca69213b614670f34
 }
 
 /* Right side: Video container */

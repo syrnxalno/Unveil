@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import "./Dashboard.css";
 
 const Dashboard = () => {
   const [userData, setUserData] = useState(null);
@@ -18,9 +19,10 @@ const Dashboard = () => {
 
       try {
         const response = await axios.get("http://localhost:5000/api/protected/dashboard", {
-          headers: { Authorization: `Bearer ${token}` }
+          headers: { Authorization: `Bearer ${token}` },
         });
 
+        console.log("User Data from API:", response.data); // Debugging line
         setUserData(response.data);
       } catch (err) {
         console.error("Dashboard Fetch Error:", err);
@@ -32,21 +34,23 @@ const Dashboard = () => {
   }, [navigate]);
 
   return (
-    <div style={{ padding: "20px" }}>
-      <h1>Dashboard</h1>
+    <div className="dashboard-container">
+      <h1 className="dashboard-title">Dashboard</h1>
       {error ? (
-        <p style={{ color: "red" }}>{error}</p>
+        <p className="error-message">{error}</p>
       ) : userData ? (
-        <div>
-          <h2>Welcome, {userData.username}!</h2>
-          <p>Email: {userData.email}</p>
-          <button onClick={() => {
+        <div className="user-info">
+          <h2>Welcome, <span className="username">{userData.username || "Unknown User"}</span>!</h2>
+          <p>Email: <span className="user-email">{userData.email || "Not available"}</span></p>
+          <button className="logout-btn" onClick={() => {
             localStorage.removeItem("token");
             navigate("/login"); // Logout and redirect to login
-          }}>Logout</button>
+          }}>
+            Logout
+          </button>
         </div>
       ) : (
-        <p>Loading...</p>
+        <p className="loading-text">Loading...</p>
       )}
     </div>
   );
