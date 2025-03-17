@@ -1,18 +1,6 @@
 /* Overall container styling */
 .signup-container {
     display: flex;
-    flex-direction: row; /* Arrange form and image side by side */
-    align-items: center;
-    justify-content: flex-start; /* Align everything to the left */
-    background-color: #fafaff;
-    font-family: Arial, sans-serif;
-    height: 80vh; /* Fill more of the screen */
-    width: 77vw; /* Make it wider */
-    margin: auto; /* Center the entire login box on the screen */
-    border-radius: 10px; /* Smooth edges */
-    /* box-shadow: 0 4px 15px rgba(193, 156, 197, 0.2); */
-    overflow: hidden; /* Ensure no content overflows */
-    position: relative; /* Required for floating elements */
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -32,18 +20,6 @@
 
 /* Left side: Signup form */
 .signup-form {
-    background: #fafaff;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: none;
-    width: 50%; /* Take only half of the container */
-    height: 100%; /* Stretch to match the container height */
-    text-align: left; /* Align text towards the left */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Center vertically */
-    align-items: flex-start; /* Align everything to the left */
-    position: relative;
     background: white;
     padding: 60px;
     width: 80%;
@@ -69,55 +45,6 @@
 
 /* Input fields */
 .signup-form input {
-    width: 100%;
-    padding: 10px;
-    margin: 8px 0;
-    border: 1px solid #ccc;
-    background-color: white;
-    border-radius: 4px;
-    font-size: 14px;
-}
-/* Floating Quote */
-.floating-quote {
-    position: absolute;
-    bottom: 0%; /* Adjust placement */
-    right: 0%;
-    width: 40%;
-    font-size: 1.5rem;
-    font-style: roman;
-    font-weight: bold;
-    color: #5a5a5a; /* Soft grey */
-    text-align: center;
-    background: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    border-radius: 12px;
-    backdrop-filter: blur(8px);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    animation: fadeIn 2s ease-in-out, floatUpDown 5s infinite ease-in-out;
-}
-/* Fade-in Effect */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* Floating Effect */
-@keyframes floatUpDown {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0px); }
-}
-
-  
-/* Submit button */
-.signup-form button {
-    width: 100%;
-    padding: 10px;
-    background-color: #d1b7e7;
-    color: rgb(58, 56, 56);
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
     width: 90%;
     padding: 12px;
     margin: 10px 0;
@@ -172,13 +99,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    padding: 10px;
-    background-color:#d1b7e7;
-    color: black;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    cursor: pointer;
     gap: 10px;
     font-size: 16px;
     font-weight: 500;
@@ -196,18 +116,6 @@
 .google-icon {
     width: 20px;
     height: 20px;
-}
-.signup-gif {
-    /*position: absolute;
-    right: 10%; /* Adjusts how far right it moves */
-    /*top: 50%;
-    transform: translateY(-50%);
-   /* width: 400px; /* Adjust size as needed */
-    max-width:30% ;
-    height: auto;
-    border-radius: 10px;
-    object-fit: contain; /* Ensures it fits well */
-    overflow: hidden;
 }
 
 /* Right side: Video container */
