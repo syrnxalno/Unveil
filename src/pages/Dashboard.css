@@ -1,0 +1,220 @@
+/* ----------------------------------- */
+/* 🌟 DASHBOARD MAIN CONTAINER */
+/* ----------------------------------- */
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background-color: #E6E6FA !important;
+}
+
+/* ----------------------------------- */
+/* 📌 SIDEBAR (FIXED WIDTH) */
+/* ----------------------------------- */
+.dashboard-container .sidebar {
+  width: 250px;
+  background: #d1b7e7;
+  color: #ffffff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-container .sidebar nav ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 100px;
+}
+
+.dashboard-container .sidebar nav ul li {
+  padding: 15px 20px;
+  margin: 10px 0;
+  border-radius: 8px;
+  transition: background 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.dashboard-container .sidebar nav ul li.active,
+.dashboard-container .sidebar nav ul li:hover {
+  background: #cba8ea;
+}
+
+.dashboard-container .sidebar nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+}
+
+/* ----------------------------------- */
+/* 📌 MAIN CONTENT (EXPANDED) */
+/* ----------------------------------- */
+.dashboard-main {
+  flex-grow: 1;  /* 🚀 Make this container take up all available space */
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 20px;
+  margin-left: 30px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
+  width: 950px;
+  height: 480px;
+  margin-top: 80px;
+}
+
+/* ----------------------------------- */
+/* 📌 HEADER */
+/* ----------------------------------- */
+.dashboard-main header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.dashboard-main header h1 {
+  font-size: 24px;
+  color: #333;
+}
+
+.dashboard-main header span {
+  font-weight: bold;
+  color: #3a2d87;
+}
+
+/* Profile Icon */
+.dashboard-main .profile-icon img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* ----------------------------------- */
+/* 📊 STATS CARDS (FULL WIDTH) */
+/* ----------------------------------- */
+.stats-cards {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.stats-cards .card {
+  flex: 1;  /* 📌 Ensures equal width */
+  padding: 20px;
+  border-radius: 12px;
+  color: #fff;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.stats-cards .card h3 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.stats-cards .card p {
+  font-size: 16px;
+}
+
+.stats-cards .card span {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Card Colors */
+.stats-cards .card.blue {
+  background: linear-gradient(135deg, #9f97f0, #b2aaec);
+}
+
+.stats-cards .card.pink {
+  background: linear-gradient(135deg, #fa6f84, #fb5179);
+}
+
+.stats-cards .card:hover {
+  transform: translateY(-5px);
+}
+
+/* ----------------------------------- */
+/* 📊 CHARTS SECTION (FULL WIDTH) */
+/* ----------------------------------- */
+.charts-wrapper {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  align-items: flex-start;
+  flex-grow: 1; /* 📌 Forces it to take up remaining space */
+}
+
+/* Charts Container */
+.charts {
+  flex: 1;
+  display: flex;
+  gap: 20px;
+}
+
+.chart {
+  flex: 1;
+  background: #ebdbf9;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.chart:hover {
+  box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.chart h3 {
+  font-size: 18px;
+  color: #3a2d87;
+  margin-bottom: 5px;
+}
+
+.chart p {
+  font-size: 14px;
+  color: #777;
+}
+
+/* Placeholder Graph */
+.graph-placeholder {
+  font-size: 40px;
+  color: #ccc;
+  padding: 20px 0;
+}
+
+/* ----------------------------------- */
+/* 📱 RESPONSIVE DESIGN */
+/* ----------------------------------- */
+@media (max-width: 1024px) {
+  .dashboard-container {
+    flex-direction: column;
+  }
+
+  .dashboard-main {
+    width: 100%;
+  }
+
+  .stats-cards {
+    flex-direction: column;
+  }
+
+  .charts {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .stats-cards {
+    flex-direction: column;
+  }
+
+  .charts {
+    flex-direction: column;
+  }
+}
