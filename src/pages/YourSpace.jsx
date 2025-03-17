@@ -28,6 +28,10 @@ Here, your voice matters. Speak your truth, connect with others who understand, 
              alt="Landing Page Image: Peer Review" 
              className="landing-image"
            />
+            {/* Redirect Button */}
+      <button className="redirect-button" onClick={() => navigate("/games/game-content")}>
+        Explore
+      </button>
     </div>
   );
 }
