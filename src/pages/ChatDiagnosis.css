@@ -1,0 +1,50 @@
+/* Wrapper to isolate the background from global styles */
+.chat-diagnosis-wrapper {
+  background-color: #E6E6FA !important; /* Softer pastel lavender */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Container styling */
+.chat-diagnosis-container {
+  width: 100%;
+  max-width: 900px;
+  text-align: center;
+  padding: 30px;
+  background-color: #E6E6FA !important; /* Clean, soft lavender */
+  border-radius: 12px;
+  position: relative;
+}
+
+/* Back Button */
+.back-button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #A885D8;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #8F6AC6;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .chat-diagnosis-container {
+    padding: 20px;
+  }
+
+  .back-button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}

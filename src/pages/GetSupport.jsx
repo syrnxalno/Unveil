@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "./Games.css";
+import "./GetSupport.css";
 import console from "../assets/console.png";
 import { keyframes } from "styled-components";
 import styled from "styled-components";
@@ -15,14 +15,15 @@ const AnimatedLandingImage = styled.img`
   max-width: 100%;
 `;
 
-function Games() {
+function GetSupport() {
   const navigate = useNavigate(); // Hook for navigation
 
   return (
     <div className="game-container">
-      <h1>Explore calming games</h1>
+      <h1>Get Support & Mental Well-being</h1>
       <p>
-        Immerse yourself in the serenity of calming games, where gentle visuals and soothing sounds guide you into a world of peace.
+      Access resources for mental well-being, chat with our AI assistant, and explore self-diagnosis tools for better understanding.
+      
       </p>
       
       {/* Landing Image */}
@@ -33,11 +34,11 @@ function Games() {
       />
 
       {/* Redirect Button */}
-      <button className="redirect-button" onClick={() => navigate("/games/game-content")}>
-        Let's go!
+      <button className="redirect-button" onClick={() => navigate("/chat-diagnosis")}>
+      Talk to Our AI & Self-Diagnose
       </button>
     </div>
   );
 }
 
-export default Games;
+export default GetSupport;
