@@ -1,11 +1,12 @@
 /* Wrapper for Chatbot (Isolated & Minimal) */
 .chatbot-wrapper {
-  width: 900px;
-  height: 400px;
+  width: 700px;
+  height: 500px;
   display: flex;
   justify-content: center;
   padding: 40px 20px;
   background-color:  #E6E6FA !important; /* Softest lavender */
+  margin-top: 100px;
 }
 
 /* Chatbot Container */
@@ -19,6 +20,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 10px;
 }
 
 /* Chat Window */

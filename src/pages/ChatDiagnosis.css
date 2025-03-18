@@ -8,8 +8,26 @@
   width: 100%;
 }
 
-/* Container styling */
-.chat-diagnosis-container {
+.chat-diagnosis-wrapper .video-container {
+  width: 80vh;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -100px; /* Shifted more to the left */
+  margin-top: 40px;    /* Lowered slightly */
+  position: relative;
+  overflow: hidden;    /* Hide any overflow from the video */
+}
+
+.chat-diagnosis-wrapper .login-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* Ensure the video covers the container while maintaining aspect ratio */
+  border-radius: 12px; /* Optional: Rounded corners */
+}
+
+.chat-diagnosis-wrapper .chat-diagnosis-container {
   width: 100%;
   max-width: 900px;
   text-align: center;
@@ -19,8 +37,7 @@
   position: relative;
 }
 
-/* Back Button */
-.back-button {
+.chat-diagnosis-wrapper .back-button {
   margin-top: 20px;
   padding: 12px 24px;
   background-color: #A885D8;
@@ -32,18 +49,18 @@
   transition: all 0.3s ease;
 }
 
-.back-button:hover {
+.chat-diagnosis-wrapper .back-button:hover {
   background-color: #8F6AC6;
   transform: translateY(-2px);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .chat-diagnosis-container {
+  .chat-diagnosis-wrapper .chat-diagnosis-container {
     padding: 20px;
   }
 
-  .back-button {
+  .chat-diagnosis-wrapper .back-button {
     padding: 10px 20px;
     font-size: 14px;
   }

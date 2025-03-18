@@ -20,10 +20,9 @@ function GetSupport() {
 
   return (
     <div className="game-container">
-      <h1>Get Support & Mental Well-being</h1>
+      <h1>Chat, Chill, and Care!</h1>
       <p>
-      Access resources for mental well-being, chat with our AI assistant, and explore self-diagnosis tools for better understanding.
-      
+      Step into a space where you can share, unwind, and feel supported. Whether you're here to talk it out or just need a little virtual company, we're here to listen.
       </p>
       
       {/* Landing Image */}
@@ -35,7 +34,7 @@ function GetSupport() {
 
       {/* Redirect Button */}
       <button className="redirect-button" onClick={() => navigate("/chat-diagnosis")}>
-      Talk to Our AI & Self-Diagnose
+      Chat & Check-In
       </button>
     </div>
   );

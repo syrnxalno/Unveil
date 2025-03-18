@@ -42,7 +42,7 @@ function Navbar() {
         <div className="nav-container">
           <ul className="nav-links">
             <li><Link to="/">Home</Link></li>
-            <li><Link to="/get-support">Get Support</Link></li> {/* Updated */}
+            <li><Link to="/get-support">Talk it out</Link></li> {/* Updated */}
             <li><Link to="/your-space">Your Space</Link></li>
             <li><Link to="/community">Community</Link></li>
             <li><Link to="/contact">Contact</Link></li>
