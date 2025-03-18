@@ -7,12 +7,12 @@ import Login from "./pages/LoginPage";
 
 // Import pages
 import Home from "./pages/Home";
-import Games from "./pages/Games";
 import YourSpace from "./pages/YourSpace";
 import Community from "./pages/Community";
 import Contact from "./pages/Contact";
-import GameExplore from "./pages/game-content"; // Import GameContent page
-import Dashboard from "./pages/Dashboard"; // Import Dashboard page
+import GetSupport from "./pages/GetSupport"; // Replacing Games
+import ChatDiagnosis from "./pages/ChatDiagnosis"; // Replacing Game Content
+import Dashboard from "./pages/Dashboard"; // Dashboard remains
 
 function Navbar() {
   const location = useLocation();
@@ -34,15 +34,15 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="logo">
-        <Link to = "/">
-        <img src={unveilLogo} alt="Unveil logo" />
+        <Link to="/">
+          <img src={unveilLogo} alt="Unveil logo" />
         </Link>
       </div>
       {!hideNav && (
         <div className="nav-container">
           <ul className="nav-links">
             <li><Link to="/">Home</Link></li>
-            <li><Link to="/games">Games</Link></li>
+            <li><Link to="/get-support">Get Support</Link></li> {/* Updated */}
             <li><Link to="/your-space">Your Space</Link></li>
             <li><Link to="/community">Community</Link></li>
             <li><Link to="/contact">Contact</Link></li>
@@ -72,14 +72,14 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/games" element={<Games />} />
-          <Route path="/games/game-content" element={<GameExplore />} /> {/* GameContent Route */}
+          <Route path="/get-support" element={<GetSupport />} /> {/* Updated */}
+          <Route path="/chat-diagnosis" element={<ChatDiagnosis />} /> {/* Updated */}
           <Route path="/your-space" element={<YourSpace />} />
           <Route path="/community" element={<Community />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/dashboard" element={<Dashboard />} /> {/* Dashboard Route */}
+          <Route path="/dashboard" element={<Dashboard />} /> {/* Dashboard remains */}
         </Routes>
       </div>
     </Router>
